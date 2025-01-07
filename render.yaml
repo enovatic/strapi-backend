@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: strapi
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: DATABASE_CLIENT
+        fromService:
+          name: strapi-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ADMIN_JWT_SECRET
+        generateValue: true
+      - key: APP_KEYS
+        generateValue: true
+      - key: API_TOKEN_SALT
+        generateValue: true
+
+  - type: postgres
+    name: strapi-db

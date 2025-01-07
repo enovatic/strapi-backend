@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_categorie_tests",
+  "info": {
+    "displayName": "test",
+    "icon": "shield"
+  },
+  "options": {},
+  "attributes": {
+    "ezfefe": {
+      "type": "string"
+    }
+  }
+}
